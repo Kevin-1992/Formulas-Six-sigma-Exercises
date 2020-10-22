@@ -1,0 +1,26 @@
+#Importing Libraries
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+import statistics
+
+#Importing CVV File from drive
+from google.colab import drive
+drive.mount('/content/drive')
+
+data_15 = pd.read_csv('/content/drive/My Drive/Tareas USAC/DATA_15.csv',header=None)
+
+df = np.array(data_15)
+
+df_flatten=df.flatten()
+
+df_flatten.mean()
+
+df_flatten.min()
+
+df_flatten.max()
+
+plt.hist(df_flatten,edgecolor='white')
+
+plt.show()
